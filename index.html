@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260925-05-46ec85d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandBloom AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --plum:#45234f; --plum-2:#643a70; --lavender:#ede5f1; --lilac:#d7c5df;
+      --cream:#fbf8f2; --ink:#2c2030; --muted:#746779; --pink:#f4dfe7;
+      --line:#e5dce6; --card:#fffdfa; --shadow:0 12px 30px rgba(71,35,80,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"DM Sans",sans-serif; color:var(--ink); background:var(--cream); }
+    button,input,textarea,select { font:inherit; }
+    button { cursor:pointer; }
+    .app-shell { width:100%; min-height:calc(100 * min(var(--vh, 1vh), 1vh)); display:flex; background:var(--cream); }
+    .sidebar { width:260px; flex:0 0 260px; background:var(--plum); color:#fffafc; padding:28px 18px; display:flex; flex-direction:column; position:sticky; top:0; height:calc(100 * min(var(--vh, 1vh), 1vh)); }
+    .brand { display:flex; align-items:center; gap:11px; padding:3px 10px 30px; }
+    .bloom { width:34px; height:34px; display:grid; place-items:center; }
+    .bloom svg { width:32px; height:32px; overflow:visible; }
+    .bloom .petal { fill:#efc9df; stroke:#f7e4ee; stroke-width:.7; }
+    .bloom .center { fill:#f8e8b7; }
+    .sidebar-botanical { margin:22px 10px 18px; height:92px; display:grid; place-items:center; opacity:.95; }
+    .sidebar-botanical svg { width:88px; height:92px; overflow:visible; }
+    .sidebar-botanical .stem { fill:none; stroke:#d8b6dc; stroke-linecap:round; stroke-width:1.7; }
+    .sidebar-botanical .leaf { fill:#b993c4; stroke:#e1cce5; stroke-width:.55; }
+    .sidebar-botanical .flower { fill:#efc9df; stroke:#f8e4ef; stroke-width:.75; }
+    .sidebar-botanical .flower-center { fill:#f8e8b7; }
+    .brand-name { font-family:Fraunces,serif; font-size:21px; letter-spacing:-.5px; }
+    .brand-name small { font:600 10px "DM Sans"; letter-spacing:1.6px; display:block; opacity:.66; margin-top:1px; }
+    .nav-btn { width:100%; display:flex; align-items:center; gap:12px; padding:12px 13px; margin:3px 0; border:0; border-radius:12px; background:transparent; color:#e9dfea; text-align:left; transition:.2s; }
+    .nav-btn:hover,.nav-btn.active { background:rgba(255,255,255,.13); color:#fff; }
+    .nav-btn svg { width:18px; height:18px; }
+    .sidebar-foot { margin-top:auto; padding:14px 9px 0; font-size:12px; color:#d7c4dc; }
+    .main-area { min-width:0; width:100%; padding:30px clamp(20px,4vw,58px) 42px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:32px; }
+    .crumb { color:var(--muted); font-size:14px; }
+    .mode-toggle,.mobile-menu { width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--plum);display:grid;place-items:center;transition:.2s; }
+    .mode-toggle:hover,.mobile-menu:hover { transform:translateY(-2px); box-shadow:var(--shadow); }
+    .mobile-menu { display:none; }
+    .view { display:none; animation:rise .35s ease both; } .view.active { display:block; }
+    @keyframes rise { from {opacity:0;transform:translateY(8px)} to {opacity:1;transform:none} }
+    .hero { max-width:900px; padding:18px 0 34px; }
+    .eyebrow { color:var(--plum-2); font-weight:700; letter-spacing:1.2px; font-size:11px; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; } h1,h2 { font-family:Fraunces,serif; }
+    h1 { font-size:clamp(38px,5vw,65px); line-height:1.03; letter-spacing:-2.2px; max-width:760px; margin:12px 0 17px; }
+    h2 { font-size:clamp(28px,3vw,39px); letter-spacing:-1.2px; margin-bottom:10px; }
+    .lead { max-width:680px; color:var(--muted); font-size:18px; line-height:1.6; }
+    .primary-btn,.secondary-btn,.tiny-btn { border:0; border-radius:11px; transition:.2s; font-weight:700; display:inline-flex; align-items:center; justify-content:center; gap:8px; }
+    .primary-btn { padding:13px 19px; background:var(--plum); color:white; box-shadow:0 7px 16px rgba(69,35,79,.18); }
+    .primary-btn:hover { background:#35183e; transform:translateY(-2px); }
+    .secondary-btn { padding:11px 14px; background:#f1e9f2; color:var(--plum); }
+    .secondary-btn:hover,.tiny-btn:hover { background:#e6d9e9; }
+    .flow { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:29px; color:var(--plum-2); font-size:12px; font-weight:700; letter-spacing:1px; }
+    .flow span { display:flex;align-items:center; gap:10px; } .flow-dot { width:7px;height:7px;border-radius:50%;background:#be88ad; }
+    .section-head { display:flex;justify-content:space-between;align-items:end;gap:16px;margin:18px 0 15px; }
+    .section-head h2 { font-size:27px; margin:0; } .section-head p { color:var(--muted); margin:0; }
+    .metrics { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:8px 0 34px;max-width:760px; }
+    .metric { background:#f1e9f2;border:1px solid #e7d9e9;border-radius:15px;padding:17px; } .metric b { display:block;font-family:Fraunces,serif;font-size:27px;color:var(--plum); }.metric span {font-size:13px;color:var(--muted);}
+    .campaign-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+    .campaign-card,.content-card,.settings-card,.form-card,.report-card { background:var(--card);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow); }
+    .campaign-card { padding:20px; transition:.2s; } .campaign-card:hover {transform:translateY(-4px);box-shadow:0 16px 32px rgba(71,35,80,.12);}
+    .card-top { display:flex;justify-content:space-between;gap:8px;align-items:start; } .card-title {font:600 18px Fraunces,serif;margin:0 0 7px;}.card-meta{font-size:13px;color:var(--muted);line-height:1.55;}
+    .badges { display:flex;gap:5px;flex-wrap:wrap;margin:16px 0; }.badge {font-size:10px;font-weight:700;color:var(--plum-2);padding:5px 7px;border-radius:7px;background:#f0e8f1;}
+    .tiny-btn { padding:8px 10px;background:#f3ebf3;color:var(--plum);font-size:12px; }
+    .empty { padding:44px 22px;text-align:center;background:#f8f2f7;border:1px dashed #cfb7d3;border-radius:18px; }.empty i{color:#a56a99;margin-bottom:9px}.empty h3{font:600 21px Fraunces,serif;margin:6px 0}.empty p{color:var(--muted);margin-bottom:17px;}
+    .steps { display:flex; gap:10px; margin:23px 0 25px; flex-wrap:wrap; }.step { padding:8px 12px;border-radius:10px;background:#eee5f0;color:#7b6781;font-size:13px;font-weight:700; }.step.active {background:var(--plum);color:white;}
+    .form-card { max-width:960px;padding:clamp(20px,4vw,36px); }.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}.field.full{grid-column:1/-1;}
+    label { display:block;font-size:13px;font-weight:700;margin-bottom:7px;color:#503b55; } .required{color:#a24e76}
+    input,textarea,select {width:100%;border:1px solid #d9cedb;background:#fffdfb;border-radius:10px;padding:12px 13px;color:var(--ink);outline:none;transition:.2s;} textarea{min-height:102px;resize:vertical;} input:focus,textarea:focus,select:focus,.multi-select-trigger:focus {border-color:var(--plum-2);box-shadow:0 0 0 3px rgba(100,58,112,.13);}
+    .multi-select { position:relative; } .multi-select-trigger { width:100%; text-align:left; border:1px solid #d9cedb; background:#fffdfb; border-radius:10px; padding:12px 13px; color:var(--muted); outline:none; transition:.2s; } .multi-select-trigger.has-selection { color:var(--ink); } .multi-select-menu { display:none; position:absolute; z-index:10; top:calc(100% + 6px); left:0; right:0; max-height:230px; overflow:auto; padding:7px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow); } .multi-select.open .multi-select-menu { display:grid; gap:2px; } .multi-select-menu label { display:flex; align-items:center; gap:9px; padding:9px 8px; margin:0; border-radius:7px; font-size:13px; font-weight:500; cursor:pointer; } .multi-select-menu label:hover { background:#f1e9f2; } .multi-select-menu input { width:auto; accent-color:var(--plum); } .dark .multi-select-trigger,.dark .multi-select-menu { background:#302433; color:#fff; } .dark .multi-select-menu label:hover { background:#49364e; }
+    .invalid {border-color:#bb4b66!important;background:#fff8f9}.error-text {color:#aa3855;font-size:12px;margin-top:5px;display:none}.error-text.show{display:block}
+    .tone-options {display:flex;flex-wrap:wrap;gap:8px}.tone-choice input{position:absolute;opacity:0}.tone-choice span{display:block;padding:9px 12px;border:1px solid #d8ccdc;border-radius:10px;color:#684f6e;font-size:13px;cursor:pointer;transition:.2s}.tone-choice input:checked+span{background:#efe4f0;border-color:var(--plum);color:var(--plum);font-weight:700;}
+    .form-actions {display:flex;align-items:center;gap:14px;margin-top:26px;}.form-hint{font-size:12px;color:var(--muted)}
+    .generation {display:none;position:fixed;inset:0;background:rgba(47,26,53,.34);z-index:50;align-items:center;justify-content:center;padding:20px}.generation.show{display:flex}.generation-box{width:min(440px,100%);background:#fffdfa;border-radius:20px;padding:35px;text-align:center;box-shadow:0 24px 70px rgba(37,15,44,.25)}.spinner{width:43px;height:43px;border:4px solid #eadbea;border-top-color:var(--plum);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 18px}@keyframes spin{to{transform:rotate(360deg)}}
+    .workspace-head {display:flex;justify-content:space-between;gap:18px;align-items:start;margin-bottom:22px}.workspace-head p{color:var(--muted);max-width:760px;line-height:1.55}.brief-strip{background:#f1e8f2;border:1px solid #e1d0e3;border-radius:15px;padding:15px 18px;margin:20px 0 24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}.brief-strip strong{color:var(--plum)}.connector{display:none}
+    .output-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.content-card{padding:21px}.platform-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.platform{font-weight:700;color:var(--plum);}.platform-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#f1e5f0;color:var(--plum)}.content-copy{white-space:pre-line;line-height:1.58;color:#483a4b;font-size:14px;min-height:122px}.actions{display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #eee5ee;padding-top:14px;margin-top:15px}.copy-status{font-size:12px;color:#357756;align-self:center;display:none}.copy-status.show{display:inline}
+    .editor { display:none;margin-top:15px; }.editor.open{display:block}.editor textarea{min-height:135px}.editor-actions{display:flex;gap:8px;margin-top:8px}
+    .archive-list{display:grid;gap:12px;max-width:1000px}.archive-row{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}.archive-row h3{margin:0 0 4px;font:600 18px Fraunces,serif}.archive-row p{margin:0;color:var(--muted);font-size:13px}
+    .settings-wrap{max-width:850px;display:grid;gap:16px}.settings-card{padding:23px}.settings-card h3{font:600 20px Fraunces,serif;margin-bottom:6px}.settings-card p{color:var(--muted);font-size:14px}.setting-line{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 0;border-top:1px solid #eee6ed}.switch{width:45px;height:25px;border:0;border-radius:20px;background:#cbb9cf;padding:3px;transition:.2s}.switch span{display:block;width:19px;height:19px;border-radius:50%;background:white;transition:.2s}.switch.on{background:var(--plum)}.switch.on span{transform:translateX(20px)}
+    .dark {--cream:#251c28;--card:#302433;--ink:#fbf5fa;--muted:#c7b7c8;--line:#4d3b51;--lavender:#3c2d40}.dark .main-area{background:#251c28}.dark input,.dark textarea,.dark select{background:#302433;color:#fff}.dark .metric,.dark .brief-strip{background:#392b3e}.dark .secondary-btn,.dark .tiny-btn{background:#49364e;color:#f7eafa}.dark .empty{background:#332537}
+    @media(max-width:800px){.sidebar{width:76px;flex-basis:76px;padding:22px 10px}.brand{padding:2px 8px 26px}.brand-name,.nav-btn span,.sidebar-foot{display:none}.nav-btn{justify-content:center;padding:13px}.main-area{padding:25px}.campaign-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:580px){.app-shell{display:block}.sidebar{width:100%;height:auto;position:relative;padding:14px 18px;display:block}.brand{padding:0;justify-content:space-between}.brand-name{display:block}.nav-links{display:none;padding-top:12px}.nav-links.open{display:block}.nav-btn{justify-content:flex-start}.nav-btn span{display:inline}.mobile-menu{display:grid;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:white}.main-area{padding:22px 16px 34px}.topbar{margin-bottom:22px}.metrics,.campaign-grid,.field-grid,.output-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.workspace-head,.archive-row{align-items:flex-start;flex-direction:column}.archive-row{gap:12px}.lead{font-size:16px}.flow{line-height:1.7}.connector{width:18px}.section-head{align-items:flex-start;flex-direction:column}.form-actions{align-items:flex-start;flex-direction:column}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/ef0304cb8c7ed696.editing_sdk.js" type="text/javascript" integrity="sha512-kmL9L5Yuj57MQaequKbMA3aGpT/5lBUp10iGA3e3qnmMLs2ZZQ0poCcIfdd5rTgrhEvNPe4HK0ohePW7ZpgAFg=="></script>
+  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="app-shell">
+   <aside class="sidebar" aria-label="Primary navigation">
+    <div class="brand">
+     <div class="flex items-center gap-2">
+      <div class="bloom" aria-hidden="true">
+       <svg viewBox="0 0 34 34" role="img" aria-label="Sakura flower">
+        <path class="petal" d="M17 15C11 13 11 6 16 5c2 0 3 2 3 4 2-4 8-3 8 1 0 3-3 5-6 6 4 1 5 7 1 9-3 1-5-2-5-5-2 4-8 3-8-1 0-3 3-4 6-4-4-1-5-6-2-8 2-1 4 0 5 3 0 0-1 3-1 5z"></path> <circle class="center" cx="17" cy="17" r="3"></circle>
+       </svg>
+      </div>
+      <div class="brand-name"><span data-template-id="brand-name" class="canva-text" style="color: rgb(255, 250, 252); font-weight: 700; font-style: normal; font-size: 16px;">BrandBloom</span><small data-template-id="brand-tagline" class="canva-text" style="color: rgb(233, 223, 234); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">AI CONTENT STUDIO</small>
+      </div>
+     </div><button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+    </div>
+    <nav class="nav-links" id="navLinks">
+     <button class="nav-btn active" type="button" data-view="dashboard"><i data-lucide="layout-dashboard"></i><span data-template-id="nav-dashboard" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Dashboard</span></button> <button class="nav-btn" type="button" data-view="create"><i data-lucide="sparkles"></i><span data-template-id="nav-create" class="canva-text" style="color: rgb(233, 223, 234); font-weight: 500; font-style: normal; font-size: 16px;">Create Campaign</span></button> <button class="nav-btn" type="button" data-view="campaigns"><i data-lucide="folder-heart"></i><span data-template-id="nav-campaigns" class="canva-text" style="color: rgb(233, 223, 234); font-weight: 500; font-style: normal; font-size: 16px;">Campaigns</span></button> <button class="nav-btn" type="button" data-view="reports"><i data-lucide="chart-no-axes-column"></i><span data-template-id="nav-reports" class="canva-text" style="color: rgb(233, 223, 234); font-weight: 500; font-style: normal; font-size: 16px;">Reports</span></button> <button class="nav-btn" type="button" data-view="settings"><i data-lucide="sliders-horizontal"></i><span data-template-id="nav-settings" class="canva-text" style="color: rgb(233, 223, 234); font-weight: 500; font-style: normal; font-size: 16px;">Settings</span></button>
+    </nav>
+    <div class="sidebar-botanical" aria-hidden="true">
+     <svg viewBox="0 0 88 92">
+      <path class="stem" d="M44 87C43 72 45 57 44 42M44 69C36 61 31 55 28 47M44 76C53 68 59 61 64 52"></path> <path class="leaf" d="M36 62c-7-1-11-5-13-10 7 0 12 3 13 10zM51 70c7-1 12-5 15-10-8 0-13 3-15 10zM43 78c-6-1-10-4-12-8 6 0 10 2 12 8z"></path> <path class="flower" d="M44 42c-7-2-9-9-5-12 2-1 4 0 5 3-1-6 5-9 8-5 2 2 1 5-1 7 5-2 9 3 6 7-2 3-6 2-8 0 1 5-4 8-7 5-2-1-2-3-1-5-4 3-9 0-8-4 1-3 4-4 7-3-2-3 0-7 4-7z"></path> <circle class="flower-center" cx="44" cy="42" r="2.6"></circle>
+     </svg>
+    </div>
+    <div class="sidebar-foot" data-template-id="sidebar-foot" style="color: rgb(215, 196, 220); font-weight: 400; font-style: normal; font-size: 16px;">Small ideas can grow into big brands &lt;3</div>
+   </aside>
+   <main class="main-area">
+    <header class="topbar">
+     <span class="crumb" id="viewCrumb">Dashboard</span> <button class="mode-toggle" id="modeToggle" type="button" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+    </header>
+    <section id="dashboard" class="view active" aria-labelledby="dashboard-title">
+     <div class="hero">
+      <div data-template-id="hero-eyebrow" class="canva-text eyebrow" style="color: rgb(100, 58, 112); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.08rem;">A creative home for your next big idea</div>
+      <h1 id="dashboard-title" data-template-id="hero-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 32px; line-height: 1.03;">Turn one idea into a complete campaign.</h1>
+      <p data-template-id="hero-supporting" class="canva-text lead" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.6;">Give BrandBloom your business brief and create platform-ready content while keeping your brand voice consistent.</p><button data-template-id="hero-cta" class="canva-button primary-btn mt-5" type="button" data-go-create="" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="sparkles"></i><span data-template-id="hero-cta-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Create Campaign</span></button>
+      <div data-template-id="flow-statement" class="canva-text flow" style="color: rgb(100, 58, 112); font-weight: 700; font-size: 12px; letter-spacing: 0.06rem;"><span><i class="flow-dot"></i> ONE BUSINESS BRIEF</span><span>→</span><span>ONE BRAND VOICE</span><span>→</span><span>4 PLATFORM FORMATS</span>
+      </div>
+     </div>
+     <div class="metrics">
+      <div class="metric"><b id="campaignCount">0</b><span data-template-id="metric-campaigns" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Campaigns in bloom</span>
+      </div>
+      <div class="metric"><b>4</b><span data-template-id="metric-platforms" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Platform formats</span>
+      </div>
+      <div class="metric"><b id="voiceCount">0</b><span data-template-id="metric-voices" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Brand voices</span>
+      </div>
+     </div>
+     <div class="section-head">
+      <div>
+       <h2 data-template-id="recent-heading" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Recent campaigns</h2>
+       <p data-template-id="recent-supporting" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Your latest ideas, ready to keep growing.</p>
+      </div><button data-template-id="recent-create" class="canva-button secondary-btn" type="button" data-go-create="" style="background: rgb(241, 233, 242); color: rgb(69, 35, 79); font-weight: 700; font-style: normal; font-size: 16px;">Start something new</button>
+     </div>
+     <div id="recentCampaigns" class="campaign-grid"></div>
+     <div id="dashboardEmpty" class="empty"><i data-lucide="flower-2"></i>
+      <h3 data-template-id="empty-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 19px;">No campaigns yet.</h3>
+      <p data-template-id="empty-text" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Create your first campaign and watch your idea bloom.</p><button data-template-id="empty-cta" class="canva-button primary-btn" type="button" data-go-create="" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Create Campaign</button>
+     </div>
+    </section>
+    <section id="create" class="view" aria-labelledby="create-title">
+     <div class="hero" style="padding-top:0">
+      <div data-template-id="create-eyebrow" class="canva-text eyebrow" style="color: rgb(100, 58, 112); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.08rem;">Let’s plant the seed</div>
+      <h2 id="create-title" data-template-id="create-title-text" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Tell us about your idea.</h2>
+      <p data-template-id="create-supporting" class="canva-text lead" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 18px;">A little context helps us make every post sound unmistakably like you.</p>
+     </div>
+     <div class="steps" aria-label="Campaign creation progress"><span class="step">1. Idea</span><span class="step active">2. Brand Context</span><span class="step">3. Generate</span>
+     </div>
+     <form id="campaignForm" class="form-card" novalidate="">
+      <div class="field-grid">
+       <div class="field"><label data-template-id="label-business-name" class="canva-text" for="businessName" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Business Name</label><input id="businessName" required="" type="text">
+        <p class="error-text" id="businessNameError">Please add your business name.</p>
+       </div>
+       <div class="field"><label data-template-id="label-business-type" class="canva-text" for="businessType" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Business Type</label><select id="businessType" required=""> <option value="">Choose a business type</option><option>Cafe &amp; Restaurant</option><option>Bakery &amp; Food</option><option>Clothing &amp; Fashion</option><option>Beauty &amp; Salon</option><option>Fitness &amp; Wellness</option><option>Education</option><option>Technology</option><option>Retail</option><option>Home &amp; Lifestyle</option><option>Travel &amp; Hospitality</option><option>Local Services</option><option>Creator / Personal Brand</option><option>Other</option> </select>
+        <p class="error-text" id="businessTypeError">Please tell us what kind of business this is.</p>
+       </div>
+       <div class="field full"><label data-template-id="label-product-service" class="canva-text" for="productService" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Product / Service</label><textarea id="productService" required=""></textarea>
+        <p class="error-text" id="productServiceError">Add the product or service you want to feature.</p>
+       </div>
+       <div class="field"><label data-template-id="label-audience" class="canva-text" for="targetAudience" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Target Audience</label>
+        <div class="multi-select" id="targetAudienceSelect"><button class="multi-select-trigger" id="targetAudience" type="button" aria-haspopup="listbox" aria-expanded="false">Choose one or more audiences</button>
+         <div class="multi-select-menu" role="listbox" aria-multiselectable="true" aria-label="Target Audience"><label><input type="checkbox" value="Students">Students</label><label><input type="checkbox" value="Young Professionals">Young Professionals</label><label><input type="checkbox" value="Families">Families</label><label><input type="checkbox" value="Parents">Parents</label><label><input type="checkbox" value="Business Owners">Business Owners</label><label><input type="checkbox" value="Creators">Creators</label><label><input type="checkbox" value="Professionals">Professionals</label><label><input type="checkbox" value="Local Customers">Local Customers</label><label><input type="checkbox" value="Online Shoppers">Online Shoppers</label><label><input type="checkbox" value="Fitness Enthusiasts">Fitness Enthusiasts</label><label><input type="checkbox" value="Travelers">Travelers</label><label><input type="checkbox" value="General Audience">General Audience</label><label><input type="checkbox" value="Other">Other</label>
+         </div>
+        </div>
+        <p class="error-text" id="targetAudienceError">Who would you like to reach?</p>
+       </div>
+       <div class="field"><label data-template-id="label-location" class="canva-text" for="location" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Location (optional)</label><input id="location" type="text">
+       </div>
+       <div class="field"><label data-template-id="label-goal" class="canva-text" for="campaignGoal" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Campaign Goal</label><select id="campaignGoal" required=""><option value="">Choose a goal</option><option>Build awareness</option><option>Launch something new</option><option>Drive bookings or sales</option><option>Grow community</option></select>
+        <p class="error-text" id="campaignGoalError">Choose a campaign goal.</p>
+       </div>
+       <div class="field"><label data-template-id="label-tone" class="canva-text" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Brand Tone</label>
+        <div class="tone-options" role="radiogroup" aria-label="Brand tone">
+         <label class="tone-choice"><input type="radio" name="tone" value="Cozy" checked=""><span>Cozy</span></label><label class="tone-choice"><input type="radio" name="tone" value="Playful"><span>Playful</span></label><label class="tone-choice"><input type="radio" name="tone" value="Professional"><span>Professional</span></label><label class="tone-choice"><input type="radio" name="tone" value="Bold"><span>Bold</span></label><label class="tone-choice"><input type="radio" name="tone" value="Friendly"><span>Friendly</span></label><label class="tone-choice"><input type="radio" name="tone" value="Minimal"><span>Minimal</span></label>
+        </div>
+       </div>
+      </div>
+      <div class="form-actions"><button data-template-id="generate-button" class="canva-button primary-btn" id="generateButton" type="submit" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700;"><i data-lucide="wand-sparkles"></i><span data-template-id="generate-button-label" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Generate Campaign</span></button><span data-template-id="form-hint" class="canva-text form-hint" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 12px;">Your brief stays connected across every format.</span>
+      </div>
+     </form>
+    </section>
+    <section id="workspace" class="view" aria-labelledby="workspace-title">
+     <div class="workspace-head">
+      <div>
+       <div class="eyebrow">
+        BrandBloom campaign studio
+       </div>
+       <h2 id="workspace-title" data-template-id="generated-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Campaign generated</h2>
+       <p data-template-id="generated-supporting" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.55;">Your campaign has been adapted for each platform while keeping the same brand message and tone.</p>
+      </div><button data-template-id="new-campaign-button" class="canva-button secondary-btn" type="button" data-go-create="" style="background: rgb(241, 233, 242); color: rgb(69, 35, 79); font-weight: 700; font-style: normal; font-size: 16px;">Create another</button>
+     </div>
+     <div class="brief-strip"><span><strong id="briefBusiness">Your brief</strong> <span id="briefGoal"></span></span><i class="connector"></i><span id="briefTone">Shared voice</span><i class="connector"></i><span data-template-id="outputs-label" class="canva-text" style="color: rgb(100, 58, 112); font-weight: 700; font-style: normal; font-size: 16px;">4 connected outputs</span>
+     </div>
+     <div class="output-grid" id="outputGrid"></div>
+    </section>
+    <section id="campaigns" class="view" aria-labelledby="campaigns-title">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        Your library
+       </div>
+       <h2 id="campaigns-title" data-template-id="campaigns-heading" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Campaign garden</h2>
+       <p data-template-id="campaigns-supporting" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Every generated campaign, gathered in one calm place.</p>
+      </div><button data-template-id="campaigns-create" class="canva-button primary-btn" type="button" data-go-create="" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Create Campaign</button>
+     </div>
+     <div id="campaignArchive" class="archive-list"></div>
+     <div id="campaignsEmpty" class="empty"><i data-lucide="sprout"></i>
+      <h3 data-template-id="empty-title-archive" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 19px;">No campaigns yet.</h3>
+      <p data-template-id="empty-text-archive" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Create your first campaign and watch your idea bloom.</p><button data-template-id="empty-cta-archive" class="canva-button primary-btn" type="button" data-go-create="" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Create Campaign</button>
+     </div>
+    </section>
+    <section id="reports" class="view" aria-labelledby="reports-title">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">
+        Campaign snapshots
+       </div>
+       <h2 id="reports-title" data-template-id="reports-heading" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Reports</h2>
+       <p data-template-id="reports-supporting" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">A simple archive of your campaign snapshots.</p>
+      </div>
+     </div>
+     <div id="reportArchive" class="archive-list"></div>
+     <div id="reportsEmpty" class="empty"><i data-lucide="chart-no-axes-column"></i>
+      <h3 data-template-id="empty-title-reports" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 19px;">No campaigns yet.</h3>
+      <p data-template-id="empty-text-reports" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Create your first campaign and watch your idea bloom.</p><button data-template-id="empty-cta-reports" class="canva-button primary-btn" type="button" data-go-create="" style="background: rgb(69, 35, 79); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Create Campaign</button>
+     </div>
+    </section>
+    <section id="settings" class="view" aria-labelledby="settings-title">
+     <div class="hero" style="padding-top:0">
+      <div class="eyebrow">
+       Your creative home
+      </div>
+      <h2 id="settings-title" data-template-id="settings-heading" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 700; font-style: normal; font-size: 24px;">Settings</h2>
+      <p data-template-id="settings-supporting" class="canva-text lead" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 18px;">Shape the small details that make your studio feel like home.</p>
+     </div>
+     <div class="settings-wrap">
+      <article class="settings-card">
+       <h3 data-template-id="voice-settings-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 600; font-style: normal; font-size: 19px;">Brand voice preferences</h3>
+       <p data-template-id="voice-settings-text" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Choose the starting tone for your next campaign.</p>
+       <div class="setting-line"><label data-template-id="default-tone-label" class="canva-text" for="defaultTone" style="margin: 0px; color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Default campaign tone</label><select id="defaultTone" style="width:180px"><option>Cozy</option><option>Playful</option><option>Professional</option><option>Bold</option><option>Friendly</option><option>Minimal</option></select>
+       </div>
+      </article>
+      <article class="settings-card">
+       <h3 data-template-id="appearance-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 600; font-style: normal; font-size: 19px;">Appearance</h3>
+       <p data-template-id="appearance-text" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Shift your studio into a softer evening palette.</p>
+       <div class="setting-line"><span data-template-id="dark-mode-label" class="canva-text" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Dark appearance</span><button id="settingsMode" class="switch" type="button" aria-label="Toggle dark appearance"><span></span></button>
+       </div>
+      </article>
+      <article class="settings-card">
+       <h3 data-template-id="notification-title" class="canva-text" style="color: rgb(44, 32, 48); font-weight: 600; font-style: normal; font-size: 19px;">Notifications</h3>
+       <p data-template-id="notification-text" class="canva-text" style="color: rgb(116, 103, 121); font-weight: 400; font-style: normal; font-size: 16px;">Keep gentle reminders switched on while your ideas grow.</p>
+       <div class="setting-line"><span data-template-id="notification-label" class="canva-text" style="color: rgb(80, 59, 85); font-weight: 700; font-style: normal; font-size: 16px;">Campaign-ready reminders</span><button id="notificationToggle" class="switch on" type="button" aria-label="Toggle campaign notifications"><span></span></button>
+       </div>
+      </article>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div id="generation" class="generation" role="status" aria-live="polite">
+   <div class="generation-box">
+    <div class="spinner"></div>
+    <h2 data-template-id="generation-title" class="canva-text" style="font-size: 24px; color: rgb(44, 32, 48); font-weight: 700; font-style: normal;">Your campaign is blooming…</h2>
+    <p data-template-id="generation-text" class="canva-text" style="color: rgb(116, 103, 121); margin: 0px; font-weight: 400; font-style: normal; font-size: 16px;">We’re weaving your brief into four connected platform stories.</p>
+   </div>
+  </div>
+  <template id="contentCardTemplate">
+   <article class="content-card">
+    <div class="platform-head">
+     <div class="platform" data-platform-title=""></div>
+     <div class="platform-mark"><i data-platform-icon=""></i>
+     </div>
+    </div>
+    <div class="content-copy" data-content-copy=""></div>
+    <div class="editor" data-editor=""><label>Refine this version</label><textarea data-editor-text=""></textarea>
+     <div class="editor-actions"><button class="tiny-btn" type="button" data-save-edit="">Save changes</button><button class="tiny-btn" type="button" data-cancel-edit="">Cancel</button>
+     </div>
+    </div>
+    <div class="actions"><button class="tiny-btn" type="button" data-edit="">Edit</button><button class="tiny-btn" type="button" data-regenerate="">Regenerate</button><button class="tiny-btn" type="button" data-copy="">Copy</button><span class="copy-status" data-copy-status="">Copied to clipboard</span>
+    </div>
+   </article>
+  </template>
+  <script>
+    let campaigns = [], activeCampaign = null, initialized = false;
+    const platformInfo = [
+      {key:"instagram_content", title:"Instagram", icon:"instagram"},
+      {key:"linkedin_content", title:"LinkedIn", icon:"linkedin"},
+      {key:"x_content", title:"X", icon:"message-circle"},
+      {key:"story_content", title:"Instagram Story", icon:"panels-top-left"}
+    ];
+
+    function showView(name) {
+      document.querySelectorAll(".view").forEach(v => v.classList.toggle("active", v.id === name));
+      document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("active", b.dataset.view === name));
+      document.getElementById("viewCrumb").textContent = name === "workspace" ? "Campaign workspace" : name.charAt(0).toUpperCase() + name.slice(1);
+      document.getElementById("navLinks").classList.remove("open");
+      document.getElementById("mobileMenu").setAttribute("aria-expanded","false");
+    }
+    function formatDate(iso) { return new Date(iso).toLocaleDateString(undefined,{day:"numeric",month:"short",year:"numeric"}); }
+    function escapeText(s){ const d=document.createElement("div");d.textContent=s||"";return d.textContent; }
+    function renderAll() {
+      document.getElementById("campaignCount").textContent = campaigns.length;
+      document.getElementById("voiceCount").textContent = new Set(campaigns.map(c=>c.brand_tone)).size;
+      renderRecent(); renderArchives();
+    }
+    function badges() { return `<div class="badges"><span class="badge">Instagram</span><span class="badge">LinkedIn</span><span class="badge">X</span><span class="badge">Stories</span></div>`; }
+    function renderRecent() {
+      const target=document.getElementById("recentCampaigns"), empty=document.getElementById("dashboardEmpty");
+      target.innerHTML=""; const items=campaigns.slice().sort((a,b)=>new Date(b.created_at)-new Date(a.created_at)).slice(0,3);
+      empty.style.display=items.length?"none":"block";
+      items.forEach(c=>target.appendChild(makeCampaignCard(c)));
+    }
+    function makeCampaignCard(c) {
+      const el=document.createElement("article"); el.className="campaign-card";
+      el.innerHTML=`<div class="card-top"><div><h3 class="card-title">${escapeText(c.campaign_name)}</h3><div class="card-meta">${escapeText(c.business_name)} · ${formatDate(c.created_at)}</div></div><i data-lucide="flower-2" style="color:#9b6694;width:19px"></i></div>${badges()}<button class="tiny-btn" type="button">View campaign <i data-lucide="arrow-up-right" style="width:13px"></i></button>`;
+      el.querySelector("button").addEventListener("click",()=>openCampaign(c)); return el;
+    }
+    function renderArchives() {
+      ["campaignArchive","reportArchive"].forEach(id=>document.getElementById(id).innerHTML="");
+      const ordered=campaigns.slice().sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));
+      document.getElementById("campaignsEmpty").style.display=ordered.length?"none":"block";
+      document.getElementById("reportsEmpty").style.display=ordered.length?"none":"block";
+      ordered.forEach(c=>{
+        ["campaignArchive","reportArchive"].forEach(id=>{
+          const row=document.createElement("article");row.className="archive-row";
+          row.innerHTML=`<div><h3>${escapeText(c.campaign_name)}</h3><p>${escapeText(c.business_name)} · ${formatDate(c.created_at)} · Instagram, LinkedIn, X & Stories</p></div><button class="tiny-btn" type="button">${id==="reportArchive"?"View Report":"View Campaign"} <i data-lucide="arrow-right" style="width:13px"></i></button>`;
+          row.querySelector("button").addEventListener("click",()=>openCampaign(c));document.getElementById(id).appendChild(row);
+        });
+      }); lucide.createIcons();
+    }
+    function openCampaign(c) { activeCampaign={...c}; renderWorkspace(); showView("workspace"); }
+    function makeCopy(data,key,variation=0) {
+      const b=data.business_name, product=data.product_service, audience=data.target_audience, goal=data.campaign_goal.toLowerCase(), tone=data.brand_tone.toLowerCase(), place=data.location ? ` in ${data.location}` : "";
+      const opener=variation ? "A fresh way to say it:" : "A little something worth making room for:";
+      return {
+        instagram_content:`${opener} ✨\n\n${b} is bringing ${product}${place} to ${audience}. Made with a ${tone} point of view, this is your invitation to discover what feels good.\n\nReady to ${goal}? Come bloom with us.\n\n#${b.replace(/\W/g,"")} #SmallBusiness #MadeWithCare #CreativeCommunity`,
+        linkedin_content:`Great brands grow from a clear idea, thoughtfully shared.\n\nAt ${b}, we're introducing ${product} for ${audience}${place}. Our focus is simple: ${goal} through a consistent, ${tone} message people can connect with.\n\nWe're excited to build meaningful momentum, one conversation at a time.`,
+        x_content:`${b} is here for ${audience}${place}. ✨\n\nMeet ${product} — created to help you ${goal}. A ${tone} idea with plenty of heart.\n\nWhat would you like to see next?`,
+        story_content:`SLIDE 1\nSomething lovely is blooming at ${b} ✨\n\nSLIDE 2\nMeet ${product}\nMade for ${audience}.\n\nSLIDE 3\nA ${tone} way to ${goal}.\n\nSLIDE 4\nCome see what’s growing →`
+      };
+    }
+    function renderWorkspace() {
+      if(!activeCampaign)return;
+      document.getElementById("briefBusiness").textContent=activeCampaign.business_name;
+      document.getElementById("briefGoal").textContent=`· ${activeCampaign.campaign_goal}`;
+      document.getElementById("briefTone").textContent=`${activeCampaign.brand_tone} brand voice`;
+      const grid=document.getElementById("outputGrid");grid.innerHTML="";
+      platformInfo.forEach(info=>{
+        const node=document.getElementById("contentCardTemplate").content.cloneNode(true);
+        const card=node.querySelector("article"), copy=card.querySelector("[data-content-copy]"), editor=card.querySelector("[data-editor]"), area=card.querySelector("[data-editor-text]");
+        card.querySelector("[data-platform-title]").textContent=info.title;card.querySelector("[data-platform-icon]").setAttribute("data-lucide",info.icon);copy.textContent=activeCampaign[info.key]||"";
+        card.querySelector("[data-edit]").onclick=()=>{area.value=activeCampaign[info.key];editor.classList.add("open");area.focus();};
+        card.querySelector("[data-cancel-edit]").onclick=()=>editor.classList.remove("open");
+        card.querySelector("[data-save-edit]").onclick=async()=>{activeCampaign[info.key]=area.value;copy.textContent=area.value;editor.classList.remove("open");await saveActive();};
+        card.querySelector("[data-regenerate]").onclick=async()=>{const fresh=makeCopy(activeCampaign,info.key,1);activeCampaign[info.key]=fresh[info.key];copy.textContent=fresh[info.key];await saveActive();};
+        card.querySelector("[data-copy]").onclick=async()=>{try{await navigator.clipboard.writeText(activeCampaign[info.key]);}catch(e){}const status=card.querySelector("[data-copy-status]");status.classList.add("show");setTimeout(()=>status.classList.remove("show"),1800);};
+        grid.appendChild(node);
+      }); lucide.createIcons();
+    }
+    async function saveActive() {
+      const match=campaigns.find(c=>c.__backendId===activeCampaign.__backendId); if(!match)return;
+      Object.assign(match,activeCampaign); const result=await window.dataSdk.update(activeCampaign);
+      if(!result.isOk) { /* visual workspace remains usable while next sync retries */ }
+    }
+    function validate() {
+      let valid=true;["businessName","businessType","productService","campaignGoal"].forEach(id=>{const e=document.getElementById(id), msg=document.getElementById(id+"Error");const bad=!e.value.trim();e.classList.toggle("invalid",bad);msg.classList.toggle("show",bad);if(bad)valid=false;});
+      const audienceButton=document.getElementById("targetAudience"), audienceError=document.getElementById("targetAudienceError"), audienceValues=[...document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]:checked')]; const audienceBad=!audienceValues.length; audienceButton.classList.toggle("invalid",audienceBad); audienceError.classList.toggle("show",audienceBad); if(audienceBad)valid=false; return valid;
+    }
+    const audienceSelect=document.getElementById("targetAudienceSelect"), audienceButton=document.getElementById("targetAudience");
+    function updateAudienceLabel(){const values=[...audienceSelect.querySelectorAll('input[type="checkbox"]:checked')].map(input=>input.value); audienceButton.textContent=values.length?values.join(", "):"Choose one or more audiences"; audienceButton.classList.toggle("has-selection",values.length>0);}
+    audienceButton.addEventListener("click",()=>{const open=audienceSelect.classList.toggle("open");audienceButton.setAttribute("aria-expanded",String(open));});
+    audienceSelect.querySelectorAll('input[type="checkbox"]').forEach(input=>input.addEventListener("change",updateAudienceLabel));
+    document.addEventListener("click",event=>{if(!audienceSelect.contains(event.target)){audienceSelect.classList.remove("open");audienceButton.setAttribute("aria-expanded","false");}});
+    document.querySelectorAll(".nav-btn").forEach(b=>b.addEventListener("click",()=>showView(b.dataset.view)));
+    document.querySelectorAll("[data-go-create]").forEach(b=>b.addEventListener("click",()=>showView("create")));
+    document.getElementById("mobileMenu").onclick=()=>{const n=document.getElementById("navLinks"),open=n.classList.toggle("open");document.getElementById("mobileMenu").setAttribute("aria-expanded",String(open));};
+    function toggleDark(){document.body.classList.toggle("dark");document.getElementById("settingsMode").classList.toggle("on",document.body.classList.contains("dark"));}
+    document.getElementById("modeToggle").onclick=toggleDark;document.getElementById("settingsMode").onclick=toggleDark;document.getElementById("notificationToggle").onclick=function(){this.classList.toggle("on")};
+    document.getElementById("campaignForm").addEventListener("submit",async e=>{
+      e.preventDefault();if(!validate())return;
+      const tone=document.querySelector('input[name="tone"]:checked').value;
+      const data={campaign_name:`${document.getElementById("businessName").value} Campaign`,business_name:document.getElementById("businessName").value,business_type:document.getElementById("businessType").value,product_service:document.getElementById("productService").value,target_audience:[...document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]:checked')].map(input=>input.value).join(", "),location:document.getElementById("location").value,campaign_goal:document.getElementById("campaignGoal").value,brand_tone:tone,created_at:new Date().toISOString()};
+      Object.assign(data,makeCopy(data));
+      const modal=document.getElementById("generation");modal.classList.add("show");const button=document.getElementById("generateButton");button.disabled=true;
+      setTimeout(async()=>{const result=await window.dataSdk.create(data);modal.classList.remove("show");button.disabled=false;if(result.isOk){activeCampaign=data;document.getElementById("campaignForm").reset();document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]').forEach(input=>input.checked=false);updateAudienceLabel();document.querySelector('input[name="tone"][value="Cozy"]').checked=true;showView("workspace");renderWorkspace();}else{document.querySelector(".form-hint").textContent="We couldn't save this campaign just now. Please try again.";}},1150);
+    });
+    const handler={onDataChanged(data){campaigns=data;renderAll();if(activeCampaign&&activeCampaign.__backendId){const latest=data.find(x=>x.__backendId===activeCampaign.__backendId);if(latest){activeCampaign={...latest};}}}};
+    (async()=>{const result=await window.dataSdk.init(handler);if(!result.isOk){document.querySelector(".form-hint").textContent="Campaign saving is unavailable right now.";} initialized=true;})();
+    lucide.createIcons();
+  </script>
+ 
+</body></html>
