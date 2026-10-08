@@ -21,7 +21,7 @@
     .bloom svg { width:32px; height:32px; overflow:visible; }
     .bloom .petal { fill:#efc9df; stroke:#f7e4ee; stroke-width:.7; }
     .bloom .center { fill:#f8e8b7; }
-    .sidebar-botanical { margin:22px 10px 18px; height:92px; display:grid; place-items:center; opacity:.95; }
+    .sidebar-botanical { margin:auto 10px 18px; height:92px; display:grid; place-items:center; opacity:.95; }
     .sidebar-botanical svg { width:88px; height:92px; overflow:visible; }
     .sidebar-botanical .stem { fill:none; stroke:#d8b6dc; stroke-linecap:round; stroke-width:1.7; }
     .sidebar-botanical .leaf { fill:#b993c4; stroke:#e1cce5; stroke-width:.55; }
@@ -32,7 +32,7 @@
     .nav-btn { width:100%; display:flex; align-items:center; gap:12px; padding:12px 13px; margin:3px 0; border:0; border-radius:12px; background:transparent; color:#e9dfea; text-align:left; transition:.2s; }
     .nav-btn:hover,.nav-btn.active { background:rgba(255,255,255,.13); color:#fff; }
     .nav-btn svg { width:18px; height:18px; }
-    .sidebar-foot { margin-top:auto; padding:14px 9px 0; font-size:12px; color:#d7c4dc; }
+    .sidebar-foot { margin-top:0; padding:14px 9px 0; font-size:12px; color:#d7c4dc; }
     .main-area { min-width:0; width:100%; padding:30px clamp(20px,4vw,58px) 42px; }
     .topbar { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:32px; }
     .crumb { color:var(--muted); font-size:14px; }
@@ -79,7 +79,7 @@
     .editor { display:none;margin-top:15px; }.editor.open{display:block}.editor textarea{min-height:135px}.editor-actions{display:flex;gap:8px;margin-top:8px}
     .archive-list{display:grid;gap:12px;max-width:1000px}.archive-row{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px}.archive-row h3{margin:0 0 4px;font:600 18px Fraunces,serif}.archive-row p{margin:0;color:var(--muted);font-size:13px}
     .settings-wrap{max-width:850px;display:grid;gap:16px}.settings-card{padding:23px}.settings-card h3{font:600 20px Fraunces,serif;margin-bottom:6px}.settings-card p{color:var(--muted);font-size:14px}.setting-line{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:14px 0;border-top:1px solid #eee6ed}.switch{width:45px;height:25px;border:0;border-radius:20px;background:#cbb9cf;padding:3px;transition:.2s}.switch span{display:block;width:19px;height:19px;border-radius:50%;background:white;transition:.2s}.switch.on{background:var(--plum)}.switch.on span{transform:translateX(20px)}
-    .dark {--cream:#251c28;--card:#302433;--ink:#fbf5fa;--muted:#c7b7c8;--line:#4d3b51;--lavender:#3c2d40}.dark .main-area{background:#251c28}.dark input,.dark textarea,.dark select{background:#302433;color:#fff}.dark .metric,.dark .brief-strip{background:#392b3e}.dark .secondary-btn,.dark .tiny-btn{background:#49364e;color:#f7eafa}.dark .empty{background:#332537}
+    .dark {--cream:#251c28;--card:#302433;--ink:#fbf5fa;--muted:#c7b7c8;--line:#4d3b51;--lavender:#3c2d40}.dark .main-area{background:#251c28}.dark input,.dark textarea,.dark select{background:#302433;color:#fff}.dark .metric,.dark .brief-strip{background:#392b3e}.dark .secondary-btn,.dark .tiny-btn{background:#49364e;color:#f7eafa}.dark .empty{background:#332537}.dark .card-image-wrap{background:#392b3e!important;border-color:#4d3b51!important}
     @media(max-width:800px){.sidebar{width:76px;flex-basis:76px;padding:22px 10px}.brand{padding:2px 8px 26px}.brand-name,.nav-btn span,.sidebar-foot{display:none}.nav-btn{justify-content:center;padding:13px}.main-area{padding:25px}.campaign-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
     @media(max-width:580px){.app-shell{display:block}.sidebar{width:100%;height:auto;position:relative;padding:14px 18px;display:block}.brand{padding:0;justify-content:space-between}.brand-name{display:block}.nav-links{display:none;padding-top:12px}.nav-links.open{display:block}.nav-btn{justify-content:flex-start}.nav-btn span{display:inline}.mobile-menu{display:grid;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:white}.main-area{padding:22px 16px 34px}.topbar{margin-bottom:22px}.metrics,.campaign-grid,.field-grid,.output-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.workspace-head,.archive-row{align-items:flex-start;flex-direction:column}.archive-row{gap:12px}.lead{font-size:16px}.flow{line-height:1.7}.connector{width:18px}.section-head{align-items:flex-start;flex-direction:column}.form-actions{align-items:flex-start;flex-direction:column}}
   </style>
@@ -277,6 +277,16 @@
      <div class="platform-mark"><i data-platform-icon=""></i>
      </div>
     </div>
+    <div class="card-image-wrap" data-image-wrap="" style="position:relative;margin-bottom:14px;border-radius:12px;overflow:hidden;background:#f3eaf2;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;border:1px solid #ebdfee;">
+     <div data-image-loader="" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--muted);font-size:12px;">
+      <div class="spinner" style="width:22px;height:22px;border-width:2px;margin:0;"></div>
+      <span>Generating visual…</span>
+     </div>
+     <img data-card-image="" src="" alt="" style="width:100%;height:100%;object-fit:cover;display:none;transition:opacity .3s;opacity:0;" />
+     <a data-image-link="" href="#" target="_blank" rel="noopener" style="position:absolute;bottom:8px;right:8px;background:rgba(44,32,48,.8);color:#fff;border-radius:6px;padding:3px 8px;font-size:11px;font-weight:600;text-decoration:none;display:none;align-items:center;gap:4px;">
+      <i data-lucide="external-link" style="width:11px;height:11px;"></i> Full visual
+     </a>
+    </div>
     <div class="content-copy" data-content-copy=""></div>
     <div class="editor" data-editor=""><label>Refine this version</label><textarea data-editor-text=""></textarea>
      <div class="editor-actions"><button class="tiny-btn" type="button" data-save-edit="">Save changes</button><button class="tiny-btn" type="button" data-cancel-edit="">Cancel</button>
@@ -287,12 +297,12 @@
    </article>
   </template>
   <script>
-    let campaigns = [], activeCampaign = null, initialized = false;
+    let campaigns = [], activeCampaign = null;
     const platformInfo = [
-      {key:"instagram_content", title:"Instagram", icon:"instagram"},
-      {key:"linkedin_content", title:"LinkedIn", icon:"linkedin"},
-      {key:"x_content", title:"X", icon:"message-circle"},
-      {key:"story_content", title:"Instagram Story", icon:"panels-top-left"}
+      {key:"instagram_content", imageKey:"instagram_image", platformKey:"instagram", title:"Instagram", icon:"instagram"},
+      {key:"linkedin_content", imageKey:"linkedin_image", platformKey:"linkedin", title:"LinkedIn", icon:"linkedin"},
+      {key:"x_content", imageKey:"x_image", platformKey:"x", title:"X", icon:"message-circle"},
+      {key:"story_content", imageKey:"story_image", platformKey:"instagramStory", title:"Instagram Story", icon:"panels-top-left"}
     ];
 
     function showView(name) {
@@ -345,6 +355,14 @@
         story_content:`SLIDE 1\nSomething lovely is blooming at ${b} ✨\n\nSLIDE 2\nMeet ${product}\nMade for ${audience}.\n\nSLIDE 3\nA ${tone} way to ${goal}.\n\nSLIDE 4\nCome see what’s growing →`
       };
     }
+    function buildFallbackImageUrl(c, p) {
+      const b = c.business_name || c.businessName || 'Brand';
+      const prod = c.product_service || c.productService || 'Product';
+      const t = c.brand_tone || c.brandTone || 'aesthetic';
+      const dims = { instagram: "width=800&height=800", linkedin: "width=1200&height=675", x: "width=1200&height=675", instagramStory: "width=720&height=1280" }[p] || "width=800&height=600";
+      const prompt = encodeURIComponent(`${b} ${prod} ${t} aesthetic promotional photography, professional commercial studio lighting, 4k`);
+      return `https://image.pollinations.ai/prompt/${prompt}?${dims}&nologo=true`;
+    }
     function renderWorkspace() {
       if(!activeCampaign)return;
       document.getElementById("briefBusiness").textContent=activeCampaign.business_name;
@@ -354,19 +372,36 @@
       platformInfo.forEach(info=>{
         const node=document.getElementById("contentCardTemplate").content.cloneNode(true);
         const card=node.querySelector("article"), copy=card.querySelector("[data-content-copy]"), editor=card.querySelector("[data-editor]"), area=card.querySelector("[data-editor-text]");
+        const cardImg=card.querySelector("[data-card-image]"), imgLoader=card.querySelector("[data-image-loader]"), imgLink=card.querySelector("[data-image-link]");
         card.querySelector("[data-platform-title]").textContent=info.title;card.querySelector("[data-platform-icon]").setAttribute("data-lucide",info.icon);copy.textContent=activeCampaign[info.key]||"";
+
+        const initialImgUrl = activeCampaign[info.imageKey] || activeCampaign.campaign?.[info.platformKey]?.imageUrl || buildFallbackImageUrl(activeCampaign, info.platformKey);
+        cardImg.alt = `${info.title} visual for ${activeCampaign.business_name}`;
+        cardImg.onload = () => {
+          imgLoader.style.display = "none";
+          cardImg.style.display = "block";
+          cardImg.style.opacity = "1";
+          imgLink.href = cardImg.src;
+          imgLink.style.display = "inline-flex";
+          lucide.createIcons();
+        };
+        cardImg.onerror = () => {
+          imgLoader.innerHTML = `<span style="font-size:11px;color:var(--muted)">Visual preview</span>`;
+        };
+        cardImg.src = initialImgUrl;
+
         card.querySelector("[data-edit]").onclick=()=>{area.value=activeCampaign[info.key];editor.classList.add("open");area.focus();};
         card.querySelector("[data-cancel-edit]").onclick=()=>editor.classList.remove("open");
         card.querySelector("[data-save-edit]").onclick=async()=>{activeCampaign[info.key]=area.value;copy.textContent=area.value;editor.classList.remove("open");await saveActive();};
-        card.querySelector("[data-regenerate]").onclick=async()=>{const fresh=makeCopy(activeCampaign,info.key,1);activeCampaign[info.key]=fresh[info.key];copy.textContent=fresh[info.key];await saveActive();};
+        card.querySelector("[data-regenerate]").onclick=async()=>{const button=card.querySelector("[data-regenerate]");button.disabled=true;try{const platform={instagram_content:"instagram",linkedin_content:"linkedin",x_content:"x",story_content:"instagramStory"}[info.key];const response=await fetch("/api/regenerate-content",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({platform,businessContext:{businessName:activeCampaign.business_name,businessType:activeCampaign.business_type,productService:activeCampaign.product_service,targetAudience:activeCampaign.target_audience,location:activeCampaign.location,campaignGoal:activeCampaign.campaign_goal,brandTone:activeCampaign.brand_tone},currentContent:activeCampaign.campaign?.[platform]||activeCampaign[info.key]})});const result=await response.json();if(!response.ok||!result.success)throw new Error(result.error||"Regeneration failed.");const output=result.content;const text=platform==="instagram"?`${output.caption}${output.hashtags?.length?"\n\n"+output.hashtags.join(" "):""}`:platform==="instagramStory"?output.slides.map(slide=>`SLIDE ${slide.slideNumber}\n${slide.text}`).join("\n\n"):output.post;activeCampaign[info.key]=text;activeCampaign.campaign=activeCampaign.campaign||{};activeCampaign.campaign[platform]=output;copy.textContent=text;if(output.imageUrl){activeCampaign[info.imageKey]=output.imageUrl;cardImg.style.opacity="0";imgLoader.style.display="flex";cardImg.src=output.imageUrl;}await saveActive();}catch(error){alert(error.message);document.querySelector(".form-hint").textContent=error.message;}finally{button.disabled=false;}};
         card.querySelector("[data-copy]").onclick=async()=>{try{await navigator.clipboard.writeText(activeCampaign[info.key]);}catch(e){}const status=card.querySelector("[data-copy-status]");status.classList.add("show");setTimeout(()=>status.classList.remove("show"),1800);};
         grid.appendChild(node);
       }); lucide.createIcons();
     }
     async function saveActive() {
-      const match=campaigns.find(c=>c.__backendId===activeCampaign.__backendId); if(!match)return;
-      Object.assign(match,activeCampaign); const result=await window.dataSdk.update(activeCampaign);
-      if(!result.isOk) { /* visual workspace remains usable while next sync retries */ }
+      const response=await fetch("/api/reports",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(activeCampaign)});
+      const result=await response.json();if(!response.ok||!result.success)throw new Error(result.error||"Could not save campaign changes.");
+      activeCampaign=result.campaign;const index=campaigns.findIndex(c=>c.id===activeCampaign.id);if(index>=0)campaigns[index]=activeCampaign;else campaigns.unshift(activeCampaign);renderAll();
     }
     function validate() {
       let valid=true;["businessName","businessType","productService","campaignGoal"].forEach(id=>{const e=document.getElementById(id), msg=document.getElementById(id+"Error");const bad=!e.value.trim();e.classList.toggle("invalid",bad);msg.classList.toggle("show",bad);if(bad)valid=false;});
@@ -384,14 +419,14 @@
     document.getElementById("modeToggle").onclick=toggleDark;document.getElementById("settingsMode").onclick=toggleDark;document.getElementById("notificationToggle").onclick=function(){this.classList.toggle("on")};
     document.getElementById("campaignForm").addEventListener("submit",async e=>{
       e.preventDefault();if(!validate())return;
-      const tone=document.querySelector('input[name="tone"]:checked').value;
-      const data={campaign_name:`${document.getElementById("businessName").value} Campaign`,business_name:document.getElementById("businessName").value,business_type:document.getElementById("businessType").value,product_service:document.getElementById("productService").value,target_audience:[...document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]:checked')].map(input=>input.value).join(", "),location:document.getElementById("location").value,campaign_goal:document.getElementById("campaignGoal").value,brand_tone:tone,created_at:new Date().toISOString()};
-      Object.assign(data,makeCopy(data));
-      const modal=document.getElementById("generation");modal.classList.add("show");const button=document.getElementById("generateButton");button.disabled=true;
-      setTimeout(async()=>{const result=await window.dataSdk.create(data);modal.classList.remove("show");button.disabled=false;if(result.isOk){activeCampaign=data;document.getElementById("campaignForm").reset();document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]').forEach(input=>input.checked=false);updateAudienceLabel();document.querySelector('input[name="tone"][value="Cozy"]').checked=true;showView("workspace");renderWorkspace();}else{document.querySelector(".form-hint").textContent="We couldn't save this campaign just now. Please try again.";}},1150);
+      const brief={businessName:document.getElementById("businessName").value.trim(),businessType:document.getElementById("businessType").value,productService:document.getElementById("productService").value.trim(),targetAudience:[...document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]:checked')].map(input=>input.value),location:document.getElementById("location").value.trim(),campaignGoal:document.getElementById("campaignGoal").value,brandTone:document.querySelector('input[name="tone"]:checked').value};
+      const modal=document.getElementById("generation"),button=document.getElementById("generateButton");modal.classList.add("show");button.disabled=true;
+      try{const response=await fetch("/api/generate-campaign",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(brief)});const result=await response.json();if(!response.ok||!result.success)throw new Error(result.error||"Campaign generation failed.");activeCampaign=result.savedCampaign;campaigns.unshift(activeCampaign);renderAll();document.getElementById("campaignForm").reset();document.querySelectorAll('#targetAudienceSelect input[type="checkbox"]').forEach(input=>input.checked=false);updateAudienceLabel();document.querySelector('input[name="tone"][value="Cozy"]').checked=true;showView("workspace");renderWorkspace();document.querySelector(".form-hint").textContent="Your brief stays connected across every format.";}
+      catch(error){alert(error.message);document.querySelector(".form-hint").textContent=error.message;}
+      finally{modal.classList.remove("show");button.disabled=false;}
     });
-    const handler={onDataChanged(data){campaigns=data;renderAll();if(activeCampaign&&activeCampaign.__backendId){const latest=data.find(x=>x.__backendId===activeCampaign.__backendId);if(latest){activeCampaign={...latest};}}}};
-    (async()=>{const result=await window.dataSdk.init(handler);if(!result.isOk){document.querySelector(".form-hint").textContent="Campaign saving is unavailable right now.";} initialized=true;})();
+    async function loadReports(){try{const response=await fetch("/api/reports");const result=await response.json();if(response.ok&&result.success){campaigns=result.campaigns;renderAll();}}catch(error){document.querySelector(".form-hint").textContent="Reports are temporarily unavailable.";}}
+    loadReports();
     lucide.createIcons();
   </script>
  
