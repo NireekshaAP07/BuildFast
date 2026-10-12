@@ -42,4 +42,4 @@ curl -X POST http://localhost:3000/api/generate-campaign \
   -d '{"businessName":"Brew & Bean","businessType":"Cafe & Restaurant","productService":"Hazelnut Cold Coffee","targetAudience":["Students","Young Professionals"],"location":"Bengaluru","campaignGoal":"Product Promotion","brandTone":"Cozy"}'
 ```
 
-`npm test` runs Node's test runner. No automated test files existed when this backend was added.
+`npm test` runs Node's test runner. No automated test files existed when this backend was added!
